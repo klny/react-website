@@ -82,18 +82,6 @@ export default function Navbar() {
           >
             Sign In
           </Button>
-          <Button
-            display={{ base: "none", md: "inline-flex" }}
-            fontSize={"sm"}
-            fontWeight={600}
-            color={"white"}
-            bg={"pink.400"}
-            _hover={{
-              bg: "pink.300",
-            }}
-          >
-            Register
-          </Button>
         </Stack>
         <ColorModeSwitcher justifySelf="flex-end" />
       </Flex>
@@ -170,10 +158,13 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
             transition={"all .3s ease"}
             _groupHover={{ color: "pink.400" }}
             fontWeight={500}
+            align={"left"}
           >
             {label}
           </Text>
-          <Text fontSize={"sm"}>{subLabel}</Text>
+          <Text fontSize={"sm"} align={"left"}>
+            {subLabel}
+          </Text>
         </Box>
         <Flex
           transition={"all .3s ease"}
@@ -275,8 +266,8 @@ const NAV_ITEMS: Array<NavItem> = [
         href: "#",
       },
       {
-        label: "Java",
-        subLabel: "",
+        label: "Java / Spring",
+        subLabel: "Java playground",
         href: "#",
       },
       {
